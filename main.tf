@@ -102,7 +102,7 @@ resource "ethereum_transaction" "deploy" {
   signer = data.ethereum_eoa.signer_account.signer
 
   to       = var.alchemist_address
-  function = "sendString(uint32, bytes32, uint8, bytes calldata, bytes32) external payable"
+  function = "sendCommand(uint32, bytes32, uint8, bytes calldata, bytes32) external payable"
   input = [
     local.name2id[var.destination_chain],
     local.padded_golem_address,
@@ -117,3 +117,6 @@ resource "ethereum_transaction" "deploy" {
   }
 }
 
+data "external" "calculate_address" {
+  program = ["sh", "-c", "python3 ${path.module}/scripts/calculate_address.py '${jsonencode({})}'"]
+}
