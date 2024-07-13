@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     ethereum = {
-      source = "hashicorp.com/ilyasavitsky/ethereum"
+      source = "ferranbt/ethereum"
       version = "0.1.1"
     }
   }
