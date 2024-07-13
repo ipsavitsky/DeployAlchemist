@@ -4,4 +4,5 @@
 
 output "gas_quote" {
   value = data.ethereum_call.get_quote.output
+  description = "The amount of gas that was quoted by Hyperlane for the cross chain transaction"
 }
