@@ -1,3 +1,3 @@
 output "blockscout_link" {
-  value = resource.ethereum_contract_deployment.deploy.explorer_link
+  value = "${var.blockscout_link}/${resource.ethereum_contract_deployment.deploy}"
 }
