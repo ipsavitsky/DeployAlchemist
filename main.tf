@@ -1,7 +1,7 @@
 locals {
   mailbox_address = "0xfFAEF09B3cd11D9b20d1a19bECca54EEC2884766"
+  mailbox_abi  = "${module.path}/ABI:Mailbox"
   golem_address   = "0x62710A99E1558332080681849184b21Fd7f16a18"
-  messagebox_abi  = "${module.path}/ABI:Mailbox"
 }
 
 data "ethereum_eoa" "signer_account" {

@@ -3,5 +3,5 @@
 # }
 
 output "gas_quote" {
-  value = data.ethereum_call.output
+  value = data.ethereum_call.get_quote.output
 }
