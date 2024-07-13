@@ -5,7 +5,7 @@ data "ethereum_eoa" "signer_account" {
 resource "ethereum_contract_deployment" "deploy" {
   signer = data.ethereum_eoa.signer_account.signer
 
-  artifact = var.artifact_path
+  artifact = var.contract_abi_path
 
   input = var.contract_inputs
 }

@@ -15,10 +15,6 @@ variable "rpc_endpoint" {
   type = string
 }
 
-variable "artifact_path" {
-  type = string
-}
-
 variable "blockscout_link" {
   type = string
 }
