@@ -11,6 +11,10 @@ variable "contract_inputs" {
   type = list(string)
 }
 
+variable "destination_chain" {
+  type = number
+}
+
 variable "rpc_endpoint" {
   type = string
 }
