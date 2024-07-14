@@ -1,5 +1,5 @@
 output "blockscout_link" {
-  value = "${var.blockscout_link}/address/${data.external.calculate_address.result["address"]}"
+  value = "${var.blockscout_link}/${data.external.calculate_address.result["address"]}"
 }
 
 output "gas_quote" {
