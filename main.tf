@@ -120,5 +120,5 @@ resource "ethereum_transaction" "deploy" {
 }
 
 data "external" "calculate_address" {
-  program = ["sh", "-c", "python3 ${path.module}/scripts/calculate_address.py '${jsonencode({"sender" = var.golem_address, "salt" = random_bytes.salt, "init_code" = local.merged_abi})}'"]
+  program = ["sh", "-c", "python3 ${path.module}/scripts/calculate_address.py '${jsonencode({"sender" = var.golem_address, "salt" = random_bytes.salt.hex, "init_code" = local.merged_abi})}'"]
 }
